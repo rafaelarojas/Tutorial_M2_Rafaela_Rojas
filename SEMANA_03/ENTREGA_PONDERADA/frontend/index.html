@@ -6,23 +6,23 @@
     <meta name="viewport" content="width=device-width" />
     <title>CRUD</title>
   </head>
-  <h1>Listagem de curriculos</h1>
-  <p><a href="/inserir.html">INSERIR NOVO CURRICULO</a></p>
+  <h1>Listagem de Usuários</h1>
+  <p><a href="/inserir.html">INSERIR NOVO USUÁRIO</a></p>
 
   <script>
-    const url = '/pessoa';
+    const url = '/usuarios';
   
     fetch(url)
       .then((response) => {
         return response.json();
       })
       .then((data) => {
-        let pessoas = data;
+        let usuarios = data;
         let saida = '';
-        pessoas.map(function(pessoa) {
-          saida += '<strong> '+ `${pessoa.foto}` + '</strong> ' + `${pessoa.nome}`  + ' - ' +  `${pessoa.cargo}` + ` ${pessoa.cpf}`;
-          saida += ' - <a href="/atualizar.html?cpf=' + `${pessoa.cpf}` + '">EDITAR</a>';
-          saida += ' | <a href="/removeCurriculo?cpf='+`${pessoa.cpf}`+'">REMOVER</a></br>';
+        usuarios.map(function(pessoa) {
+          saida += '<strong> '+ `${pessoa.nome}` + '<strong> '+ `${pessoa.cargo}` + '</strong> ' + `${pessoa.telefone}`  + ' - ' +  `${pessoa.email}`;
+          saida += ' - <a href="/atualizar.html?id_pessoa=' + `${pessoa.id_pessoa}` + '">EDITAR</a>';
+          saida += ' | <a href="/removeUsuario?id_pessoa='+`${pessoa.id_pessoa}`+'">REMOVER</a></br>';
         });
         document.getElementById('resultado').innerHTML = saida;
       })

@@ -17,7 +17,7 @@ app.use(express.static("../frontend/"));
 app.use(express.json());
 
 // Retorna todos registros (é o R do CRUD - Read)
-app.get('/pessoa', (req, res) => {
+app.get('/usuarios', (req, res) => {
 	res.statusCode = 200;
 	res.setHeader('Access-Control-Allow-Origin', '*');
 	var db = new sqlite3.Database(DBPATH); // Abre o banco
@@ -32,27 +32,27 @@ app.get('/pessoa', (req, res) => {
 });
 
 // Insere um registro (é o C do CRUD - Create)
-app.post('/insereCurriculo', urlencodedParser, (req, res) => {
+app.post('/insereUsuario', urlencodedParser, (req, res) => {
 	res.statusCode = 200;
 	res.setHeader('Access-Control-Allow-Origin', '*'); 
 	var db = new sqlite3.Database(DBPATH); // Abre o banco
-	sql = "INSERT INTO pessoa (foto, nome, cargo, cpf) VALUES ('" + req.body.foto + "','" + req.body.nome + "', '" + req.body.cargo + "', '" + req.body.cpf + "')";
+	sql = "INSERT INTO pessoa (nome, cargo, telefone, email) VALUES ('" + req.body.nome + "', '" + req.body.cargo + "', '" + req.body.telefone + "', '" + req.body.email + "')";
 	console.log(sql);
 	db.run(sql, [],  err => {
 		if (err) {
 		    throw err;
 		}	
 	});
-	res.write('<p>SUA CADIDATURA FOI INSERIDA COM SUCESSO!</p><a href="/index.html">VOLTAR</a>');
+	res.write('<p>DADOS INSERIDOS COM SUCESSO!</p><a href="/">VOLTAR</a>');
 	db.close(); // Fecha o banco
 	res.end();
 });
 
 // Monta o formulário para o update (é o U do CRUD - Update)
-app.get('/atualizaCurriculo', (req, res) => {
+app.get('/atualizaUsuario', (req, res) => {
 	res.statusCode = 200;
 	res.setHeader('Access-Control-Allow-Origin', '*'); 
-	sql = 'SELECT * FROM pessoa WHERE cpf='+ req.query.cpf;
+	sql = "SELECT * FROM pessoa WHERE id_pessoa="+ req.query.id_pessoa;
 	console.log(sql);
 	var db = new sqlite3.Database(DBPATH); // Abre o banco
 	db.all(sql, [],  (err, rows ) => {
@@ -65,10 +65,10 @@ app.get('/atualizaCurriculo', (req, res) => {
 });
 
 // Atualiza um registro (é o U do CRUD - Update)
-app.post('/atualizaCurriculo', urlencodedParser, (req, res) => {
+app.post('/atualizaUsuario', urlencodedParser, (req, res) => {
 	res.statusCode = 200;
 	res.setHeader('Access-Control-Allow-Origin', '*'); 
-	sql = "UPDATE pessoa SET foto='" + req.body.foto + "', nome= '" + req.body.nome + "' , cargo='" + req.body.cargo + "' WHERE cpf='" + req.body.cpf + "'";
+	sql = "UPDATE pessoa SET nome='" + req.body.nome + "', cargo='" + req.body.cargo + "', telefone='" + req.body.telefone + "', email = '" + req.body.email + "',  WHERE id_pessoa='" + req.body.id_pessoa + "'";
 	console.log(sql);
 	var db = new sqlite3.Database(DBPATH); // Abre o banco
 	db.run(sql, [],  err => {
@@ -77,23 +77,23 @@ app.post('/atualizaCurriculo', urlencodedParser, (req, res) => {
 		}
 		res.end();
 	});
-	res.write('<p>USUARIO ATUALIZADO COM SUCESSO!</p><a href="/">VOLTAR</a>');
+	res.write('<p>DADO ATUALIZADO COM SUCESSO!</p><a href="/">VOLTAR</a>');
 	db.close(); // Fecha o banco
 });
 
 // Exclui um registro (é o D do CRUD - Delete)
-app.get('/removeCurriculo', urlencodedParser, (req, res) => {
+app.get('/removeUsuario', urlencodedParser, (req, res) => {
 	res.statusCode = 200;
 	res.setHeader('Access-Control-Allow-Origin', '*'); 
-	sql = "DELETE FROM pessoa WHERE cpf='" + req.query.cpf + "'";
+	sql = "DELETE FROM pessoa WHERE id_pessoa='" + req.query.id_pessoa + "'";
 	console.log(sql);
 	var db = new sqlite3.Database(DBPATH); // Abre o banco
 	db.run(sql, [],  err => {
 		if (err) {
 		    throw err;
 		}
-		res.write('<p>CURRICULO REMOVIDO COM SUCESSO!</p><a href="/">VOLTAR</a>');
-		res.end();
+		res.write('<p>DADO REMOVIDO COM SUCESSO!</p><a href="/">VOLTAR</a>');
+		res.end()
 	});
 	db.close(); // Fecha o banco
 });

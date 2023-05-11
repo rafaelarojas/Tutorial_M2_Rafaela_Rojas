@@ -6,16 +6,18 @@
     <meta name="viewport" content="width=device-width" />
     <title>CRUD</title>
   </head>
-  <h1>Atualização de curriculo</h1>
+  <h1>Atualização de Usuário</h1>
 
-    <form name="form1" method="post" action="/atualizaCurriculo">
-        FOTO: <input type="text" id="foto" name="foto" size="50" value="">
-        <br>
-        NOME: <input type="text" id="nome" name="nome" value="">
+    <form name="form1" method="post" action="/atualizaUsuario">
+        NOME COMPLETO: <input type="text" id="nome" name="nome" size="50" value="">
         <br>
         CARGO: <input type="text" id="cargo" name="cargo" value="">
         <br>
-        CPF: <input type="text" id="cpf" name="cpf" value="">
+        TELEFONE: <input type="phone" id="telefone" name="telefone" value="">
+        <br>
+        EMAIL: <input type="e-mail" id="email" name="email" value="">
+        <br>
+        <input type="hidden" id="pessoa_id" name="pessoa_id" value="">
         
         <input type="submit" value="ATUALIZAR">  
     </form>    
@@ -23,20 +25,21 @@
     <script>
         let url = new URL(window.location.href);
         let params = url.searchParams;
-        url = '/atualizaCurriculo?cpf='+url.searchParams.get("cpf");
+        url = '/atualizapessoa?pessoa_id='+url.searchParams.get("pessoa_id");
 
         fetch(url)
         .then((response) => {
             return response.json();
         })
         .then((data) => {
-            let pessoas = data;
+            let usuarios = data;
 
-            pessoas.map(function(pessoa) {
-                document.getElementById('foto').value = pessoa.foto;
+            usuarios.map(function(pessoa) {
+                document.getElementById('pessoa_id').value = pessoa.pessoa_id;
                 document.getElementById('nome').value = pessoa.nome;
                 document.getElementById('cargo').value = pessoa.cargo;
-                document.getElementById('cpf').value = pessoa.cpf;
+                document.getElementById('telefone').value = pessoa.telefone;
+                document.getElementById('email').value = pessoa.email;
             });
             alert(response.json());
         })
