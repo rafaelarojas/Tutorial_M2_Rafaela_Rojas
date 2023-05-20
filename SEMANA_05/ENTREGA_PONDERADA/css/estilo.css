@@ -5,7 +5,7 @@ body {
  
  /* estilo da classe "pessoa" */
  .pessoa {
-   background-color: #ff69cd;
+   background-color: #ff69d2;
    border-radius: 10px;
    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
    padding: 20px;
@@ -46,7 +46,7 @@ body {
  
  /* estilo da classe "formacao" */
  .formacao {
-   background-color: #ff69cd;
+   background-color: #ffa1e0;
    border-radius: 10px;
    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
    padding: 20px;
@@ -60,7 +60,7 @@ body {
  
  /* estilo da classe "experiencia" */
  .experiencia {
-   background-color: #ff69cd;
+   background-color: #ffa1e0;
    border-radius: 10px;
    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
    padding: 20px;
@@ -74,7 +74,7 @@ body {
  
  /* estilo da classe "habilidades" */
  .habilidades {
-   background-color: #ff69cd;
+   background-color: #ffa1e0;
    border-radius: 10px;
    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
    padding: 20px;
@@ -88,7 +88,7 @@ body {
  
  /* estilo da classe "personalidades" */
  .personalidades {
-   background-color: #ff69cd;
+   background-color: #ffa1e0;
    border-radius: 10px;
    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
    padding: 20px;
