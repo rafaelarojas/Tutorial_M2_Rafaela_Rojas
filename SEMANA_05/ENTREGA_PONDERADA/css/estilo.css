@@ -1,0 +1,114 @@
+/* geral */
+body {
+   font-family: "Roboto", Arial, sans-serif;
+ }
+ 
+ /* estilo da classe "pessoa" */
+ .pessoa {
+   background-color: #ff69cd;
+   border-radius: 10px;
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+   padding: 20px;
+   margin-bottom: 20px;
+ }
+ 
+ /* estilo da classe "dados" dentro de "pessoa" */
+ .dados {
+   display: flex;
+   align-items: center;
+ }
+ 
+ .dados img {
+   border-radius: 50%;
+   margin-right: 20px;
+ }
+ 
+ /* estilo da classe "descricao" dentro de "dados" */
+ .descricao {
+   flex-grow: 1;
+ }
+ 
+ .nome {
+   font-size: 24px;
+   margin: 0;
+ }
+ 
+ .descricao {
+   font-size: 18px;
+   margin: 5px 0;
+ }
+ 
+ .telefone,
+ .email,
+ .linkedin {
+   margin: 0;
+ }
+ 
+ /* estilo da classe "formacao" */
+ .formacao {
+   background-color: #ff69cd;
+   border-radius: 10px;
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+   padding: 20px;
+   margin-bottom: 20px;
+ }
+ 
+ /* estilo da classe "titulo" dentro de "formacao" */
+ .titulo {
+   margin: 0;
+ }
+ 
+ /* estilo da classe "experiencia" */
+ .experiencia {
+   background-color: #ff69cd;
+   border-radius: 10px;
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+   padding: 20px;
+   margin-bottom: 20px;
+ }
+ 
+ /* estilo da classe "cargo" dentro de "experiencia" */
+ .cargo {
+   margin: 0;
+ }
+ 
+ /* estilo da classe "habilidades" */
+ .habilidades {
+   background-color: #ff69cd;
+   border-radius: 10px;
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+   padding: 20px;
+   margin-bottom: 20px;
+ }
+ 
+ /* estilo da classe "titulo" dentro de "habilidades" */
+ .titulo {
+   margin: 0;
+ }
+ 
+ /* estilo da classe "personalidades" */
+ .personalidades {
+   background-color: #ff69cd;
+   border-radius: 10px;
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+   padding: 20px;
+   margin-bottom: 20px;
+ }
+ 
+ /* estilo da classe "titulo" dentro de "personalidades" */
+ .titulo {
+   margin: 0;
+ }
+ 
+ /* tablet e mobile */
+ @media only screen and (max-width: 600px) {
+   .pessoa,
+   .formacao,
+   .experiencia,
+   .habilidades,
+   .personalidades {
+     padding: 10px;
+     margin-bottom: 10px;
+   }
+ }
+ 

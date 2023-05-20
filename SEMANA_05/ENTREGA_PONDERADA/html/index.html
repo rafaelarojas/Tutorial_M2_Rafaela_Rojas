@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../css/estilo.css">
+	<link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+    <style> /* responsívidade no código html */
+        @media screen and (max-width: 767px) {
+            /* mobile */
+            .dados {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .descricao {
+                text-align: center;
+            }
+            
+            .formacao, .experiencia, .habilidades, .personalidades {
+                margin-bottom: 20px;
+            }
+        }
+        
+        @media screen and (min-width: 768px) and (max-width: 1023px) {
+            /* tablets */
+            .dados {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+            }
+            
+            .descricao {
+                margin-left: 20px;
+            }
+        }
+    </style>
+	<title>Meu Currículo</title>
+</head>
+
+<body>
+	<div class="pessoa">
+		<div class="dados">        
+			<img src="../images/profile.jpg" height="90px" width="90px">
+			<div class="descricao">
+				<h1 class="nome">Rafaela Cristina Rojas Lemos</h1>
+				<p class="descricao">Design UX/UI - Backend</p>
+				<p class="telefone">11 11111-1111</p>
+				<p class="email">rafaelacrisr@gmail.com</p>
+				<img src="../images/linkedin.png" height="20px" width="20px">
+				<p class="linkedin">https://www.linkedin.com/in/rafaelarojas/</p>
+			</div>
+		</div>
+	</div>
+	<div class="formacao">
+		<img src="../images/formacao.png" height="50px" width="50px">
+		<h1 class="titulo">Formações</h1>
+		<div class="formacao"></div>
+		<h2 class="curso">Engenharia de Software</h2>
+		<p class="instituicao">Inteli - Instituto de Tecnologia e Liderança</p>
+		<p class="data">janeiro de 2023</p>
+		<p class="Descrição">Realização do curso de Engenharia de Software no instituto de tecnologia e liderança, aprendendo hard skills e soft skills</p>
+	</div>
+	<div class="experiencia">
+		<img src="../images/experiencia.png" height="50px" width="50px">
+		<h1 class="titulo">Experiências</h1>
+		<div class="experiencia"></div>
+		<h2 class="cargo">UX Design</h2>
+		<p class="empresa">Inteli</p>
+		<p class="Descrição">Estudo e desenvolvimento na parte de experiência de usuário em uma plataforma feita para alunos do Inteli</p>
+</div>
+	<div class="habilidades">
+		<img src="../images/habilidade.png" height="50px" width="50px">
+		<h1 class="titulo">Habilidades</h1>
+		<div class="habilidades"></div>
+		<p class="habilidade1">Inglês - Intermediário</p>
+		<p class="habilidade2">Espanhol - Básico</p>
+		<p class="habilidade3">Alemão - Básico</p>
+		<p class="habilidade4">Japonês - Básico</p>
+		<p class="habilidade5">User Experience</p>
+		<p class="habilidade6">User Interface</p>
+		<p class="habilidade7">Graphic Design</p>
+		<p class="habilidade8">Python</p>
+	</div>
+	<div class="personalidades">
+		<img src="../images/personalidade.png" height="50px" width="50px">
+		<h1 class="titulo">Personalidades</h1>
+		<div class="personalidades"></div>
+		<p class="personalidade1">Criatividade</p>
+		<p class="personalidade2">Ambição</p>
+		<p class="personalidade3">Flexibilidade</p>
+	</div>
+</body>
+</html>
