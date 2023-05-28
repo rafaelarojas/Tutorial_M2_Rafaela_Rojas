@@ -1,0 +1,150 @@
+/* geral */
+body {
+   font-family: "Roboto", "Roboto", "Roboto";
+ }
+ 
+ /* estilo da classe "pessoa" */
+ .pessoa {
+   background-color: #ff69d2;
+   border-radius: 10px;
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+   padding: 20px;
+   margin-bottom: 20px;
+ }
+ 
+ /* estilo da classe "dados" dentro de "pessoa" */
+ .dados {
+   display: flex;
+   align-items: center;
+ }
+
+ .dados img {
+   border-radius: 50%;
+   margin-right: 20px;
+ }
+ 
+ /* estilo da classe "descricao" dentro de "dados" */
+ .descricao {
+   flex-grow: 1;
+ }
+ 
+ .nome {
+   font-size: 24px;
+   margin: 0;
+ }
+ 
+ .descricao {
+   font-size: 18px;
+   margin: 5px 0;
+ }
+ 
+ .telefone,
+ .email,
+ .linkedin {
+   margin: 0;
+ }
+
+ .carousel {
+  position: relative;
+  width: 500px;
+  margin: 0 auto;
+  background-color: #ff69d2;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.slides {
+  display: flex;
+  overflow: hidden;
+}
+
+.slides img {
+  width: 100%;
+  height: auto;
+}
+
+.controls {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.prev-btn,
+.next-btn {
+  padding: 5px 10px;
+  margin: 0 5px;
+}
+ 
+ /* estilo da classe "formacao" */
+ .formacao {
+   background-color: #ffa1e0;
+   border-radius: 10px;
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+   padding: 20px;
+   margin-bottom: 20px;
+ }
+ 
+ /* estilo da classe "titulo" dentro de "formacao" */
+ .titulo {
+   margin: 0;
+ }
+ 
+ /* estilo da classe "experiencia" */
+ .experiencia {
+   background-color: #ffa1e0;
+   border-radius: 10px;
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+   padding: 20px;
+   margin-bottom: 20px;
+ }
+ 
+ /* estilo da classe "cargo" dentro de "experiencia" */
+ .cargo {
+   margin: 0;
+ }
+ 
+ /* estilo da classe "habilidades" */
+ .habilidades {
+   background-color: #ffa1e0;
+   border-radius: 10px;
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+   padding: 20px;
+   margin-bottom: 20px;
+ }
+ 
+ /* estilo da classe "titulo" dentro de "habilidades" */
+ .titulo {
+   margin: 0;
+ }
+ 
+ /* estilo da classe "personalidades" */
+ .personalidades {
+   background-color: #ffa1e0;
+   border-radius: 10px;
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+   padding: 20px;
+   margin-bottom: 20px;
+ }
+ 
+ /* estilo da classe "titulo" dentro de "personalidades" */
+ .titulo {
+   margin: 0;
+ }
+
+ .linkedin {
+    border-radius: 50%;
+ }
+ 
+ /* tablet e mobile */
+ @media only screen and (max-width: 600px) {
+   .pessoa,
+   .formacao,
+   .experiencia,
+   .habilidades,
+   .personalidades {
+     padding: 10px;
+     margin-bottom: 10px;
+   }
+ }
+ 
