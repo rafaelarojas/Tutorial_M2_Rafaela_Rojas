@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="shortcut icon" href="SEMANA_05/ENTREGA_PONDERADA/images/favicon.ico" type="image/x-icon">
+	  <link rel="stylesheet" href="./SEMANA_06/ENTREGA_PONDERADA/css/estilo.css">
+	  <link rel="shortcut icon" href="./SEMANA_06/ENTREGA_PONDERADA/images/favicon.ico" type="image/x-icon">
+	  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <style> /* responsívidade no código html */
         @media screen and (max-width: 767px) {
             /* mobile */
@@ -35,121 +37,6 @@
                 margin-left: 20px;
             }
         }
-
-		/* geral */
-body {
-   font-family: "Roboto", "Roboto", "Roboto";
- }
- 
- /* estilo da classe "pessoa" */
- .pessoa {
-   background-color: #ff69d2;
-   border-radius: 10px;
-   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-   padding: 20px;
-   margin-bottom: 20px;
- }
- 
- /* estilo da classe "dados" dentro de "pessoa" */
- .dados {
-   display: flex;
-   align-items: center;
- }
- 
- .dados img {
-   border-radius: 50%;
-   margin-right: 20px;
- }
- 
- /* estilo da classe "descricao" dentro de "dados" */
- .descricao {
-   flex-grow: 1;
- }
- 
- .nome {
-   font-size: 24px;
-   margin: 0;
- }
- 
- .descricao {
-   font-size: 18px;
-   margin: 5px 0;
- }
- 
- .telefone,
- .email,
- .linkedin {
-   margin: 0;
- }
- 
- /* estilo da classe "formacao" */
- .formacao {
-   background-color: #ffa1e0;
-   border-radius: 10px;
-   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-   padding: 20px;
-   margin-bottom: 20px;
- }
- 
- /* estilo da classe "titulo" dentro de "formacao" */
- .titulo {
-   margin: 0;
- }
- 
- /* estilo da classe "experiencia" */
- .experiencia {
-   background-color: #ffa1e0;
-   border-radius: 10px;
-   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-   padding: 20px;
-   margin-bottom: 20px;
- }
- 
- /* estilo da classe "cargo" dentro de "experiencia" */
- .cargo {
-   margin: 0;
- }
- 
- /* estilo da classe "habilidades" */
- .habilidades {
-   background-color: #ffa1e0;
-   border-radius: 10px;
-   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-   padding: 20px;
-   margin-bottom: 20px;
- }
- 
- /* estilo da classe "titulo" dentro de "habilidades" */
- .titulo {
-   margin: 0;
- }
- 
- /* estilo da classe "personalidades" */
- .personalidades {
-   background-color: #ffa1e0;
-   border-radius: 10px;
-   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-   padding: 20px;
-   margin-bottom: 20px;
- }
- 
- /* estilo da classe "titulo" dentro de "personalidades" */
- .titulo {
-   margin: 0;
- }
- 
- /* tablet e mobile */
- @media only screen and (max-width: 600px) {
-   .pessoa,
-   .formacao,
-   .experiencia,
-   .habilidades,
-   .personalidades {
-     padding: 10px;
-     margin-bottom: 10px;
-   }
- }
- 
     </style>
 	<title>Meu Currículo</title>
 </head>
@@ -157,19 +44,30 @@ body {
 <body>
 	<div class="pessoa">
 		<div class="dados">        
-			<img src="SEMANA_05/ENTREGA_PONDERADA/images/profile.jpg" height="90px" width="90px">
+			<img src="./SEMANA_06/ENTREGA_PONDERADA/images/profile.jpg" height="90px" width="90px" alt="imagem pessoal" class="profile">
 			<div class="descricao">
 				<h1 class="nome">Rafaela Cristina Rojas Lemos</h1>
 				<p class="descricao">Design UX/UI - Backend</p>
 				<p class="telefone">11 11111-1111</p>
 				<p class="email">rafaelacrisr@gmail.com</p>
-				<img src="SEMANA_05/ENTREGA_PONDERADA/images/linkedin.png" height="20px" width="20px">
-				<p class="linkedin">https://www.linkedin.com/in/rafaelarojas/</p>
+				<img src="./SEMANA_06/ENTREGA_PONDERADA/images/linkedin.png" height="50px" width="50px" class="linkedin" >
 			</div>
 		</div>
 	</div>
+	<div class="carousel">
+		<h1>Projetos</h1>
+		<div class="slides">
+		  <img src="./SEMANA_06/ENTREGA_PONDERADA/images/projeto1.jpeg" alt="Imagem 1" class="projeto1">
+		  <img src="./SEMANA_06/ENTREGA_PONDERADA/images/projeto2.jpeg" alt="Imagem 2" class="projeto2">
+		  <img src="./SEMANA_06/ENTREGA_PONDERADA/images/projeto3.jpeg" alt="Imagem 3" class="'projeto3">
+		</div>
+		<div class="controls">
+		  <button class="prev-btn"><img src="./SEMANA_06/ENTREGA_PONDERADA/images/left.png" alt="Anterior"></button>
+		  <button class="next-btn"><img src="./SEMANA_06/ENTREGA_PONDERADA/images/right.png alt="Próximo"></button>
+		</div>
+	  </div>	
 	<div class="formacao">
-		<img src="SEMANA_05/ENTREGA_PONDERADA/images/formacao.png" height="50px" width="50px">
+		<img src="./SEMANA_06/ENTREGA_PONDERADA/images/formacao.png" height="50px" width="50px">
 		<h1 class="titulo">Formações</h1>
 		<div class="formacao"></div>
 		<h2 class="curso">Engenharia de Software</h2>
@@ -178,7 +76,7 @@ body {
 		<p class="Descrição">Realização do curso de Engenharia de Software no instituto de tecnologia e liderança, aprendendo hard skills e soft skills</p>
 	</div>
 	<div class="experiencia">
-		<img src="SEMANA_05/ENTREGA_PONDERADA/images/experiencia.png" height="50px" width="50px">
+		<img src="./SEMANA_06/ENTREGA_PONDERADA/images/experiencia.png" height="50px" width="50px">
 		<h1 class="titulo">Experiências</h1>
 		<div class="experiencia"></div>
 		<h2 class="cargo">UX Design</h2>
@@ -186,7 +84,7 @@ body {
 		<p class="Descrição">Estudo e desenvolvimento na parte de experiência de usuário em uma plataforma feita para alunos do Inteli</p>
 </div>
 	<div class="habilidades">
-		<img src="SEMANA_05/ENTREGA_PONDERADA/images/habilidade.png" height="50px" width="50px">
+		<img src="./SEMANA_06/ENTREGA_PONDERADA/images/habilidade.png" height="50px" width="50px">
 		<h1 class="titulo">Habilidades</h1>
 		<div class="habilidades"></div>
 		<p class="habilidade1">Inglês - Intermediário</p>
@@ -199,12 +97,13 @@ body {
 		<p class="habilidade8">Python</p>
 	</div>
 	<div class="personalidades">
-		<img src="SEMANA_05/ENTREGA_PONDERADA/images/personalidade.png" height="50px" width="50px">
+		<img src="./SEMANA_06/ENTREGA_PONDERADA/images/personalidade.png" height="50px" width="50px">
 		<h1 class="titulo">Personalidades</h1>
 		<div class="personalidades"></div>
 		<p class="personalidade1">Criatividade</p>
 		<p class="personalidade2">Ambição</p>
 		<p class="personalidade3">Flexibilidade</p>
 	</div>
+	<script src="./SEMANA_06/ENTREGA_PONDERADA/js/script.js"></script>
 </body>
 </html>
