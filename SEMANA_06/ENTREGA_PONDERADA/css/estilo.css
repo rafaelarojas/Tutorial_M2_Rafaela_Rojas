@@ -142,7 +142,8 @@ body {
    .formacao,
    .experiencia,
    .habilidades,
-   .personalidades {
+   .personalidades,
+   .carousel {
      padding: 10px;
      margin-bottom: 10px;
    }
