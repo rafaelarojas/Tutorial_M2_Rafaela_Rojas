@@ -143,7 +143,12 @@ body {
    .experiencia,
    .habilidades,
    .personalidades,
-   .carousel {
+   .carousel,
+   .slides,
+   .slides img,
+   .controls,
+   .prev-btn,
+   .next-btn{
      padding: 10px;
      margin-bottom: 10px;
    }
