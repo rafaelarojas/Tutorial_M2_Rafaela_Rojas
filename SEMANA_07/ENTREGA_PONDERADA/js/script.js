@@ -107,3 +107,17 @@ var getProjects = '#getProjects';
     //adiciona a quebra de linha e o json convertido em string
      //console.log(xhttp.responseText);
 }
+
+const xhr = new XMLHttpRequest();
+const container = document.getElementById('container');
+
+xhr.onload = function() {
+  if (this.status === 200) {
+    container.innerHTML = xhr.responseText;
+  } else {
+    console.warm('Did not recive 200 OK from response!')
+  }
+}
+
+xhr.open('get','SEMANA_07/ENTREGA_PONDERADA/html/index.html');
+xhr.send();
