@@ -1,5 +1,7 @@
 $(document).ready(function() {
 
+var getProjects = '#getProjects';
+
   //Primera ação
   //Efeito de hover nos blocos
     $('.formacao, .experiencia, .habilidades, .personalidades').hover(
@@ -91,4 +93,17 @@ $(document).ready(function() {
     window.location.href = 'https://github.com/rafaelarojas/my_truck';
   });
 
-  
+  function projetoGET(){ //faz uma requisição GET para o URL
+    var url = "file:///C:/Users/Inteli/Documents/GitHub/Tutorial_M2_Rafaela_Rojass/SEMANA_07/ENTREGA_PONDERADA/html/index.html";
+    var resposta;
+
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("GET", url, false);
+    xhttp.send();//A execução do script pára aqui até a requisição retornar do servidor
+
+    resposta = JSON.parse(xhttp.responseText); //converte de JSON para um objeto JavaScript
+    $(getProjects).append("<br /><br />" + JSON.stringify(resposta)); // a resposta é convertida de volta para uma string
+    //dicionada ao elemento HTML
+    //adiciona a quebra de linha e o json convertido em string
+     //console.log(xhttp.responseText);
+}
