@@ -91,4 +91,20 @@ $(document).ready(function() {
     window.location.href = 'https://github.com/rafaelarojas/my_truck';
   });
 
+
+
+//AJAX
+const xhr = new XMLHttpRequest();
+const container = document.getElementById('container');
+
+xhr.onload = function() {
+  if (this.status === 200) {
+    container.innerHTML = xhr.responseText;
+  } else {
+    console.warm('Did not recive 200 OK from response!')
+  }
+}
+
+xhr.open('get','html/index.html');
+xhr.send();
   
